@@ -1,0 +1,13 @@
+{% extends "SiteFirstBundle:Main:index.html.twig" %}
+
+{% block post1 %}
+    {% block post_head1 %}
+    <h2><a href="{{path('site_news_categories')}}">Категорії новин</a></h2>        
+    {% endblock %}
+        <table>
+		{% for article in category %}
+                    <tr><td>{{article.category}}</td><td><a href="{{path('site_news_category',{slug: article.slug})}}">Показати...</a></td></tr>
+		{% endfor %}
+        </table>
+
+{% endblock %}

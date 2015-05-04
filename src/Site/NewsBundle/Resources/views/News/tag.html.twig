@@ -1,0 +1,12 @@
+{% extends "SiteFirstBundle:Main:index.html.twig" %}
+
+{% block post1 %}
+     
+    <h2><a href="#">{{tag.getTag}}</a></h2>       
+    
+    {% for article in tag.getNews() %}
+        <table>
+          <tr><td>{{article.getTitle}}</td><td><a href="{{path('site_news_article',{slug: article.slug})}}">Показати...</a></td></tr>
+        </table>  
+    {% endfor %}
+{% endblock %}

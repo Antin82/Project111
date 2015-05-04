@@ -1,0 +1,23 @@
+homepage:
+    path:     /
+    defaults: { _controller: SiteNewsBundle:Default:index }
+    
+site_news:
+    path:     /news
+    defaults: { _controller: SiteNewsBundle:News:index }
+
+site_news_article:
+    path:     /article/{slug}
+    defaults: { _controller: SiteNewsBundle:News:article }
+    
+site_news_category:
+    path:     /category/{slug}
+    defaults: { _controller: SiteNewsBundle:News:category }
+
+site_news_categories:
+    path:     /categories
+    defaults: { _controller: SiteNewsBundle:News:categories }
+    
+site_news_tag:
+    path:     /tags/{slug}
+    defaults: { _controller: SiteNewsBundle:News:tag }

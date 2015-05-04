@@ -1,0 +1,51 @@
+{% extends "SiteFirstBundle:Main:index.html.twig" %}
+
+{% block post1 %}
+        
+    {% block post_head1 %}
+    <h2><a href="{{path('site_news')}}">Новини</a></h2>        
+    {% endblock %}
+    <div class="post_info">
+                        
+        <div class="post_date">
+            April 15, 2015
+        </div>
+
+        <div class="post_author">
+            <a href="#">by Antin</a>
+        </div>
+
+        <div class="post_comment">
+            <a href="#">184 comments</a>
+        </div>
+
+        <div class="cleaner"></div>
+    </div>      
+    
+    <p><img src="https://farm8.staticflickr.com/7624/16716195008_557d8e3633.jpg" width="500" height="282" alt="DSCF2840"></p>
+    
+    
+    {% if news %}
+        <table>
+		{% for article in news %}
+                    <ul><li>{{article.title}}<a href="{{path('site_news_article',{slug: article.slug})}}"> Показати...</a></li></ul>
+		{% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}   
+
+{% block post2 %}
+   
+    {{ knp_pagination_render(news) }}
+   
+{% endblock %}  
+
+{#{% block tags %}
+        <h3>Archives</h3>
+            <table>
+		{% for article in tag %}
+                    <tr><td>{{article.tag}}</td><td><a href="{{path('site_news_category',{slug: article.slug})}}">Показати...</a></td></tr>
+		{% endfor %}
+            </table>
+{% endblock %}#}
+{# total items count #}

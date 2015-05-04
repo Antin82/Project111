@@ -1,0 +1,159 @@
+{% extends "SiteFirstBundle::layout.html.twig" %}
+
+{% block content %}
+    <div id="templatemo_content_wrapper_outer">
+
+	<div id="templatemo_content_wrapper_inner">
+    
+    	<div id="templatemo_content_wrapper">
+        	
+            <div id="templatemo_content">
+            	<div class="content_bottom"></div>
+            	
+                <div id="main_column">
+                
+                {% block post1 %} 
+                    <div class="post_box">
+                        
+                           {% block post_head1 %}
+                            <h2><a href="#">{#{{article.title}}#}</a></h2>
+                           {% endblock %}
+                        <div class="post_info">
+                        
+                            <div class="post_date">
+                                October 28, 2024
+                          </div>
+                            
+                            <div class="post_author">
+                                <a href="#">by Admin</a>
+                            </div>
+                            
+                            <div class="post_comment">
+                                <a href="#">184 comments</a>
+                            </div>
+                            
+                            <div class="cleaner"></div>
+                        </div>
+                        
+                        <div class="post_body">
+                        
+                        	<img src="https://farm8.staticflickr.com/7624/16716195008_557d8e3633.jpg" width="500" height="282" alt="DSCF2840">
+                        
+                                                       
+                      </div>
+                        
+                      <div class="continue"><a href="#">Continue</a></div>
+                         
+                    </div> <!-- end of a post -->
+                
+                {% endblock %}    
+                    
+               {# <table>
+		{% for article in news %}
+                    <tr><td>{{article.title}}</td><td><a href="{{path('site_news_article',{slug: article.slug})}}">Показати...</a></td></tr>
+		{% endfor %}
+                </table>#}
+                
+                    <div class="post_box">
+                        {% block post2 %} 
+                            {% block post_head2 %}
+                        <h2><a href="#">New Website Design</a></h2>
+                            {% endblock %}
+                  <div class="post_info">
+                        
+                            <div class="post_date">
+                                October 24, 2024
+                            </div>
+                            
+                            <div class="post_author">
+                                <a href="#">by Admin</a>
+                            </div>
+                            
+                            <div class="post_comment">
+                                <a href="#">256 comments</a>
+                            </div>
+                            
+                            <div class="cleaner"></div>
+                        </div>
+                        
+                        <div class="post_body">
+                        
+                        	<img src="https://farm8.staticflickr.com/7576/15464038827_d67a9385bd.jpg" width="500" height="281" alt="DSCF7755">
+                        
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent adipiscing turpis sed massa mattis sit amet pulvinar lorem ultrices. Morbi at fermentum tortor. <a href="#">Morbi sed eros arcu</a>, at condimentum odio. Curabitur tempus auctor accumsan. </p>
+                          <p>Sed et venenatis nunc. Cras at mauris neque. Nam laoreet aliquam mauris. Aliquam ullamcorper quam vel est tempor mollis. Maecenas fringilla elementum eros, a adipiscing quam aliquam ac. Pellentesque eget nisi eu dui mattis semper quis <a href="#">blandit nunc</a>. Nullam eget nisl neque. Suspendisse vel urna tellus.</p>
+                      </div>
+                        
+                      <div class="continue"><a href="#">Continue</a></div>
+                        {% endblock %}
+                    </div> <!-- end of a post -->
+
+				</div> <!-- end of main column -->        
+				
+                <div id="side_column">
+                
+                
+                <div class="ads_250_250">
+                	<a href="http://www.flashmo.com" target="_blank" title="free flash template"><img src="images/templatemo_ads_02.jpg" alt="free flash template" /></a>                </div>
+                
+                <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="side_column_section">
+                
+                	<div class="ads_125_125 right_padding_10">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="image" /></a>
+                    </div>
+                    
+                    <div class="ads_125_125">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="image" /></a>
+                    </div>
+                    
+                </div>
+                
+                <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="side_column_section">
+
+                    
+                    {% block tags %}
+		         {{render(controller('SiteNewsBundle:News:tags'))}}   
+                    {% endblock %} 
+                </div> 
+                
+                <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="side_column_section">
+                
+                   	<h3>Recent Posts</h3>
+                    
+                    <div class="recent_post">
+                    	<h4><a href="#">Sed metus nisl, placerat vitae iaculis in</a></h4>
+                    	Aliquam nec est quis felis venenatis imperdiet. Duis placerat luctus sem.
+                    </div>
+                    
+                    <div class="recent_post">
+                    	<h4><a href="#">Donec molestie aliquet nisi eu facilisis</a></h4>
+                    In vitae placerat enim. Aenean elementum lectus eleifend a pellentesque lacus aliquet. 
+                    </div>
+                    
+                    <div class="recent_post">
+                    	<h4><a href="#">Proin  magna amet fermentum dignissim</a></h4>
+                    Nulla gravida, lacus molestie convallis dolor sem suscipit nisl, ut pharetra erat leo in elit.
+                    </div>
+                    
+                    
+                </div>
+                                
+                </div> <!-- end of side column -->
+            
+            	<div class="cleaner"></div>
+            </div>
+        
+        	<div class="cleaner"></div>
+        </div>
+        
+        <div class="cleaner"></div>        
+    </div>
+
+</div>
+{% endblock %}      

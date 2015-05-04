@@ -1,0 +1,6 @@
+    <h3>Tags</h3>
+        <table>
+            {% for article in tag %}
+                <tr><td><a href="{{path('site_news_tag',{slug: article.getSlug})}}">{{article.getTag}}</a></td></tr>
+            {% endfor %}
+        </table>

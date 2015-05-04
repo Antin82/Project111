@@ -1,0 +1,14 @@
+{% extends "SiteFirstBundle::layout.html.twig" %}
+
+{% block content %}
+    <h2><a href="#">{{article.title}}</a></h2>
+<div class="post_body">
+    <p>
+    {{article.content|raw}}
+    </p>
+    <p><a href="{{path('site_news_category',{slug: article.getCategory.getSlug})}}">{{article.getCategory.getCategory}}</a></p>
+    {% for tag in article.getTags %}
+        <a href="{{path('site_news_tag',{slug: tag.getSlug})}}">{{tag.getTag}}</a>
+    {% endfor %}
+</div>
+{% endblock %}
